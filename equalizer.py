@@ -21,7 +21,7 @@ def main(filename, r):
     m, n = a.shape
     
     #у img.histogram() почему-то длина 512 вместо 256, пришлось собрать вручную
-    h = [0.0] * 256
+    h = np.zeros(256)
     for i in range(m):
         for j in range(n):
             h[a[i, j]]+=1
